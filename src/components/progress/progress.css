@@ -1,0 +1,15 @@
+.progress-con {
+    transition: background-color 0.3s ease;
+  }
+  
+  .progress-games,
+  .progress-desktop,
+  .progress-montage {
+    transition: transform 0.3s ease;
+  }
+  
+  .progress-games:hover,
+  .progress-desktop:hover,
+  .progress-montage:hover {
+    transform: scale(1.02);
+  }

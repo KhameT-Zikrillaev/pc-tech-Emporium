@@ -1,0 +1,13 @@
+
+
+#text{
+    color:white !important
+}
+.MySwiperTwo{
+    padding: 0px 10px !important;
+}
+.swiper-pagination{
+  color:white !important;
+  bottom: -5px  !important;
+  z-index: 99 !important;
+}

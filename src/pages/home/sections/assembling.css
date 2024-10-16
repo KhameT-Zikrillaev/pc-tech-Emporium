@@ -1,0 +1,41 @@
+.assembling-title-mobile{
+        color: transparent;
+        display: none;
+        justify-content: center;
+        text-align: center;
+        font-size: 32px;
+        font-weight: bold;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        background: linear-gradient(to right, #f56565, #6b46c1);
+        -webkit-background-clip: text;
+        background-clip: text;
+        text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);           
+}
+
+@media (max-width: 768px) {
+    .assembling-title-mobile{
+      display: flex;
+    }
+}
+
+.assembling-title{
+    color: transparent;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    background: linear-gradient(to right, #f56565, #6b46c1);
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);           
+}
+
+@media (max-width: 768px) {
+.assembling-title{
+  display: none;
+}
+}
