@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './formsend.css';
+
 import datafiles from '/src/datafiles/comping';
 import formbg from '/src/assets/images/form-bg.png';
 import icon1 from '/src/assets/images/corpuse-icon.svg';
@@ -12,7 +13,9 @@ import icon7 from '/src/assets/images/blokbg-icon.svg';
 import icon8 from '/src/assets/images/cooler-icon.svg';
 import icon9 from '/src/assets/images/cpu-fan.svg';
 import sendimages from '/src/assets/images/tick-icon.svg';
+import axios from '/src/axios.js'
 export default function Form() {
+  
   const [modalcalculate,activecalculate] = useState(false)
   const [modalorder,activeorder] = useState(false)
   const [modalfinish,activefinish] = useState(false)
@@ -34,6 +37,47 @@ export default function Form() {
   const [email, setEmail] = useState('');
   const [textOrder,selecttextOrder]=useState('Запольните Форму')
   const [textActive,selecttextActive]=useState(false)
+//  const [case,setCase]=
+  const [cpufan, setCpufan] = useState([]);
+  const [cooler, setCooler] = useState([]);
+  useEffect(() => {
+
+    const fetchCase = async () => {
+      try {
+          const response = await axios.get('/cpufan');
+          setCase(response?.data);
+      } catch (error) {
+          console.error('Ошибка при загрузке данных:', error);
+      } finally {
+        
+      }
+   };
+    const fetchCpufan = async () => {
+      try {
+          const response = await axios.get('/cpufan');
+          setCpufan(response?.data);
+      } catch (error) {
+          console.error('Ошибка при загрузке данных:', error);
+      } finally {
+        
+      }
+   };
+    const fetchFan = async () => {
+      try {
+          const response = await axios.get('/cooler');
+          setCooler(response?.data);
+      } catch (error) {
+          console.error('Ошибка при загрузке данных:', error);
+      } finally {
+        
+      }
+    };
+   
+    fetchCpufan();
+    fetchFan();
+    
+}, []);
+
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~total sht~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~``
 const [OzuTotal,selectOzuTotal] = useState(Number)
 const [GpuTotal,selectGpuTotal] = useState(Number)
@@ -355,27 +399,29 @@ const handleChange = (e) => {
           </div>
            {/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~CPU FAN~~~~~~~~~~~~~~~~~~~~~~ */}
           <div className="card flex flex-col w-[300px]">
+          
             <label className='ml-3  text-white text-[18px] uppercase  font-semibold ' htmlFor="videocard">Куллер для процессор</label>
             <span className=' ml-3 w-[95%] h-[1px] my-2 bg-red-600'></span>
             <div className='flex flex-col p480:flex-row gap-1'>
             <select className='p-3 w-full rounded-md bg-[#444444] text-white'   name="videocard" id="videocard" onChange={handleSelectCpufan}>
             <option value="">Select memory</option>
-             {datafiles.cpufan.map((item)=>(
+             {cpufan.map(item =>(
                 <option key={item.id} value={JSON.stringify(item)}>{item.name} | {item.price}$</option>
              ))}
             </select>
+       
             </div>
          
           {/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~FAN~~~~~~~~~~~~~~~~~~~~~~ */}
         
           </div>
           <div className="card flex flex-col w-[300px]">
-            <label className='ml-3  text-white text-[18px] uppercase  font-semibold ' htmlFor="videocard">Жесткий диск HDD</label>
+            <label className='ml-3  text-white text-[18px] uppercase  font-semibold ' htmlFor="videocard">Куллер для корпуса</label>
             <span className=' ml-3 w-[95%] h-[1px] my-2 bg-red-600'></span>
             <div className='flex flex-col p480:flex-row gap-1'>
             <select className='p-3 w-full rounded-md bg-[#444444] text-white'   name="videocard" id="videocard" onChange={handleSelectFan}>
             <option value="">Select memory</option>
-             {datafiles.fan.map((item)=>(
+             {cooler.map((item)=>(
                 <option key={item.id}  value={JSON.stringify(item)}>{item.name} | {item.price}$</option>
              ))}
             </select>
@@ -584,7 +630,7 @@ const handleChange = (e) => {
         <button type='submit' className='text-white w-[45%] text-[20px] px-4 py-2 rounded-md bg-green-700' >Заказать</button>
         
        </div>
-        </form>re
+        </form>
         
      
       </div>

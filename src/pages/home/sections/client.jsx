@@ -18,7 +18,7 @@ export default function Client() {
     prevEl: '.sales__button-prev',
   };
   return (
-    <div className='clients mt-[580px] p768:mt-[600px] bg-black p768:h-[500px]'>
+    <div className='clients bg-black mt-[-10px] py-[50px]'>
        <div className="container relative">
         <h2 className='text-white text-center text-[40px] my-2'>Отзыв клиентов</h2>
        <Swiper
@@ -41,7 +41,7 @@ export default function Client() {
             },
           }}
           modules={[Pagination, Navigation]}
-          className="MySwiperTwo"
+          className="MySwiperTwo mt-10"
         >
 
            <SwiperSlide className='swiper-card bg-[#18171C] text-white rounded-md p-[20px]'>

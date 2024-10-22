@@ -1,0 +1,71 @@
+
+.animate-pulse {
+    animation: textColorChange 3s ease-in-out infinite;
+  }
+  .sale {
+    background-image: url('/src/assets/images/sale-bg.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    width: 100%; 
+    padding:20px 0px;
+  }
+  .overlay {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+
+  @keyframes textColorChange {
+    0% {
+      color: #f33e01;
+      scale: 1.0;
+    }
+    50% {
+      color: #00ffc8;
+      scale: 1.1;
+    }
+    100% {
+      color: #ffb700;
+      scale: 1.0;
+    }
+  }
+
+  @keyframes shadowAnimation {
+      0% {
+        filter: drop-shadow(0 0 15px rgba(243, 62, 1, 0.9)); 
+    
+      }
+      50% {
+        filter: drop-shadow(0 0 15px rgba(0, 255, 200, 0.9)); 
+    
+      }
+      100% {
+        filter: drop-shadow(0 0 15px rgba(255, 183, 0, 0.9)); 
+      
+      }
+  }
+  
+  .animate-shadow {
+    animation: shadowAnimation 5s linear infinite; 
+  }
+  @keyframes bgAnimation {
+    0% {
+      background-color: #ff6b6b; 
+      filter: drop-shadow(0 0 10px rgba(243, 62, 1, 0.9));
+    }
+    50% {
+      background-color: #01a582;
+      filter: drop-shadow(0 0 10px rgba(2, 196, 154, 0.9)); 
+    }
+    100% {
+      background-color: #ffb700; 
+      filter: drop-shadow(0 0 10px rgba(255, 183, 0, 0.9)); 
+    }
+  }
+  
+  .animate-bg {
+    animation: bgAnimation 5s linear infinite;
+  }

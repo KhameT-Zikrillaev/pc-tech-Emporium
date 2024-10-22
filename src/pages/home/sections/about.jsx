@@ -45,7 +45,7 @@ const About = () => {
   }, []);
 
   return (
-    <div className='about bg-black text-white py-[50px]' ref={ref}>
+    <div className='about bg-black text-white py-[50px] mt-[580px] p768:mt-[600px]' ref={ref}>
       <div className="container px-2">
         <div className="flex flex-wrap p768:flex-nowrap justify-center p768:justify-between items-center">
           <div className="card-grid flex flex-col gap-3">

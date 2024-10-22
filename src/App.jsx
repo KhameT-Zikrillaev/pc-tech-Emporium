@@ -19,8 +19,6 @@ function App() {
        <Header/>
        <Mainlayout/>
        <Footer/>
-
-
       </div>
 
     </>

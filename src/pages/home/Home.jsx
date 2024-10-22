@@ -6,6 +6,7 @@ import Assembling from './sections/assembling'
 import Topcomping from './sections/topcomping'
 import Client from './sections/client'
 import About from './sections/about'
+import Sale from './sections/sale'
 import Trust from './sections/trust'
 import Formsend from './sections/formsend'
 
@@ -17,8 +18,11 @@ export default function Home() {
       <Corpuse/>
       <Assembling/>
       <Topcomping/>
-      <Client/>
       <About/>
+      <Sale/>
+      <Client/>
+      
+      
       <Trust/>
       
       <Formsend/>

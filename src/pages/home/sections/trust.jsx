@@ -1,17 +1,19 @@
-import React from 'react'
+
+import React, { useState, useEffect } from 'react';
 import './trust'
 import check from '/src/assets/images/check.svg';
 import trustphoto from '/src/assets/images/pc-tech.png';
 export default function trust() {
+ 
   return (
     <div className='trust bg-[#121212] py-[50px] text-white'>
-       <div className="container h-[600px] flex justify-around">
-         <div className="left">
-            <h3 className='trust-title text-center font-[Furore] text-[40px] leading-[56px] font-normal'>
+       <div className="container p-2 p768:h-[600px] flex  justify-around flex-col-reverse  p768:flex-row">
+         <div className="left mx-auto p768:mx-0">
+            <h3 className='trust-title text-center font-[Furore] text-[30px] p1024:text-[40px] leading-[36px] p1024:leading-[56px] font-normal'>
                 НАМ ДОВЕРЯЮТ, <br/>
                 НАС ВЫБИРАЮТ
             </h3>
-            <ul className='flex flex-col gap-5 mt-[50px]'>
+            <ul className='flex flex-col  p1024:gap-5 mt-[50px]'>
                 <li className='flex gap-2'>
                     <img src={check} alt="" />
                     <span className='mt-4 max-w-[320px] w-full'>
@@ -50,6 +52,9 @@ export default function trust() {
             </ul>
          </div>
          <div className="right">
+            <div className='text-white'>
+            
+            </div>
                <img className='h-full' src={trustphoto} alt="" />
          </div>
        </div>
