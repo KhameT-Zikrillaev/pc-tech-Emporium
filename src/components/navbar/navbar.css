@@ -1,6 +1,14 @@
 .navbar{
     background: #000;
 }
+.navbar-active{
+  position: fixed;
+  z-index: 11;
+  width: 100%;
+  background: transparent;
+  backdrop-filter: blur(10px); 
+  background-image: none !important;
+}
 .burger-btn {
     width: 30px;
     height: 25px;

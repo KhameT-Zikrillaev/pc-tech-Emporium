@@ -53,7 +53,8 @@ option{
     width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.5); /* Черный прозрачный фон */
-    z-index: -2; /* Убедись, что это выше других элементов */
+    /* Убедись, что это выше других элементов */
+    z-index: -2;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -75,7 +76,7 @@ option{
 .modal-order-active{
 opacity: 1;
 transform: translate(-50%, -50%)scale(1.0); 
-z-index: 11;
+z-index: 99;
 }
 .modal-order_active{
     width: 100vw;

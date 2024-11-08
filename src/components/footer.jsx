@@ -44,7 +44,7 @@ export default function Footer() {
           <li><a className='hover:hover:text-red-600' href="">Видеокарты</a></li>
         </ul>
       </div>
-      <div className="block-three text-white ">
+      <div id="contact" className="block-three text-white ">
         <ul className=' flex flex-col gap-3 text-[20px] text-center p480:text-start'>
           <li className='text-[25px] text-red-600 font-semibold'>Контакты</li>
           <li className='flex flex-col '>

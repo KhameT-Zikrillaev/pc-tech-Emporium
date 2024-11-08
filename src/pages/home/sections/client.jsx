@@ -18,7 +18,7 @@ export default function Client() {
     prevEl: '.sales__button-prev',
   };
   return (
-    <div className='clients bg-black mt-[-10px] py-[50px]'>
+    <div className='clients bg-black mt-[-10px] py-[50px]' id='about'>
        <div className="container relative">
         <h2 className='text-white text-center text-[40px] my-2'>Отзыв клиентов</h2>
        <Swiper

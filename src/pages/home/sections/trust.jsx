@@ -8,7 +8,7 @@ export default function trust() {
   return (
     <div className='trust bg-[#121212] py-[50px] text-white'>
        <div className="container p-2 p768:h-[600px] flex  justify-around flex-col-reverse  p768:flex-row">
-         <div className="left mx-auto p768:mx-0">
+         <div className="left mx-auto p768:mx-0" id="service">
             <h3 className='trust-title text-center font-[Furore] text-[30px] p1024:text-[40px] leading-[36px] p1024:leading-[56px] font-normal'>
                 НАМ ДОВЕРЯЮТ, <br/>
                 НАС ВЫБИРАЮТ

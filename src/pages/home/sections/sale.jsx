@@ -28,7 +28,7 @@ export default function sale() {
     </div>
 
 
-        <div className=' text-white flex flex-col p768:flex-row  gap-4 justify-center items-center p-2 rounded-lg shadow-lg'>
+        <div className=' text-white flex flex-col p768:flex-row  gap-4 justify-center items-center p-2 rounded-lg shadow-lg' id="axes">
   <h2 className='text-[20px] p992:text-[28px]  mt-[60px] p480:mt-[0px] p480:mx-[50px] text-center font-bold leading-snug bg-gradient-to-r from-[#607d8b] via-[#6cb4d8] to-[#ccc1c1] text-transparent bg-clip-text'>
     Покупайте компьютер у нас и получайте 5% <br/> 
     от суммы обратно на ваш аккаунт
