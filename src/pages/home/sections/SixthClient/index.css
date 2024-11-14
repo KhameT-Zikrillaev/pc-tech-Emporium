@@ -1,0 +1,33 @@
+.card-row-1 {
+  display: grid;
+  grid-template-columns: 45% 25% 30%;
+  gap: 20px;
+}
+
+.card-row-2 {
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+  gap: 20px;
+}
+
+/* Медиазапрос для экранов меньше 768px */
+@media (max-width: 768px) {
+  .card-row-1 {
+    grid-template-columns: 100%; /* все карточки по 100% ширины */
+  }
+
+  .card-row-2 {
+    grid-template-columns: 100%; /* все карточки по 100% ширины */
+  }
+}
+
+/* Медиазапрос для экранов меньше 480px */
+@media (max-width: 480px) {
+  .card-row-1 {
+    grid-template-columns: 100%; /* все карточки по 100% ширины */
+  }
+
+  .card-row-2 {
+    grid-template-columns: 100%; /* все карточки по 100% ширины */
+  }
+}

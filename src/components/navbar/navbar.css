@@ -1,13 +1,11 @@
-.navbar{
-    background: #000;
+.navbar {
+  box-shadow: 2px 4px 12px rgba(0, 99, 149, 0.9) !important;
 }
-.navbar-active{
+.navbar-active {
   position: fixed;
   z-index: 11;
   width: 100%;
-  background: transparent;
-  backdrop-filter: blur(10px); 
-  background-image: none !important;
+  background: black; 
 }
 .burger-btn {
     width: 30px;
@@ -43,8 +41,10 @@
   }
   
   /* Адаптация для мобильного меню */
-  .mobile-navigation a {
-    font-size: 1.5rem;
+
+  a{
     text-decoration: none;
   }
+
+
   
